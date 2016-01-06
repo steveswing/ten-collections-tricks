@@ -1,6 +1,7 @@
 package com.briarshore.codemash.collections;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -16,7 +17,9 @@ public class SortedArrayListBuilder {
     }
 
     public boolean add(final String s) {
-        return items.add(s);
+        final boolean result = items.add(s);
+        Collections.sort(items);
+        return result;
     }
 
     public List<String> getItems() {
