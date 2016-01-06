@@ -46,4 +46,8 @@ public class SortedArrayListBuilder {
         }
         return result;
     }
+
+    public boolean addUniqueCaseInsensitivity(final String s) {
+        return addUnique(s);
+    }
 }

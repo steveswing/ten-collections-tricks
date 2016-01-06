@@ -79,4 +79,13 @@ public class SortedArrayListBuilderTest {
         Assert.assertTrue("expected true", builder.addUnique(expected));
         Assert.assertFalse("expected false", builder.addUnique(expected));
     }
+
+    @Test
+    public void testAddUniqueItemsWithCaseInsensitvity() throws Exception {
+        final String expectedLower = "expected";
+        final String expectedUpper = expectedLower.toUpperCase();
+        Assert.assertTrue("expected true", builder.addUniqueCaseInsensitivity(expectedLower));
+        Assert.assertFalse("expected false", builder.addUniqueCaseInsensitivity(expectedLower));
+        Assert.assertFalse("expected false", builder.addUniqueCaseInsensitivity(expectedUpper));
+    }
 }
