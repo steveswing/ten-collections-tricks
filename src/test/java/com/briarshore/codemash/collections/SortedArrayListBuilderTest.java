@@ -54,11 +54,14 @@ public class SortedArrayListBuilderTest {
 
         Assert.assertEquals("expected match", expected1 + ", " + expected2, new StringJoiner(", ").add(actualItems.get(0)).add(actualItems.get(1)).toString());
 
+        final String aardvark = "aardvark";
+        actualItems.add(aardvark);
+
         Assert.assertNotNull("expected non-null", actualItems);
-        Assert.assertEquals("expected match", 2, actualItems.size());
+        Assert.assertEquals("expected match", 3, actualItems.size());
 
         final String actual0 = actualItems.get(0);
-        Assert.assertEquals("expected match", expected1, actual0);
+        Assert.assertEquals("expected match", aardvark, actual0);
 
         final String actual1 = actualItems.get(1);
         Assert.assertEquals("expected match", expected2, actual1);
