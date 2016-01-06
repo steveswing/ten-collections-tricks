@@ -16,9 +16,18 @@ public class SortedArrayListBuilder {
         this.items = new ArrayList<String>();
     }
 
+    /*
+        (-(insertionPoint)) - 1 ---> -1 - insertionPoint
+        e.g. index = -10
+        -1 -(index) ---> -1 -(-10) --> -1 + 10 == 9
+    */
     public boolean add(final String s) {
-        final boolean result = items.add(s);
-        Collections.sort(items);
+        final boolean result = true;
+        int index = Collections.binarySearch(items, s);
+        if (index < 0) {
+            index = -1 - index;
+        }
+        items.add(index, s);
         return result;
     }
 
