@@ -31,5 +31,9 @@ public class SortedArrayListBuilderTest {
         Assert.assertFalse("expected non-empty list", actualItems.isEmpty()); // <-- notice: use isEmpty() not 0 == size().
 
         Assert.assertTrue("expected true", actualItems.contains(expected));
+
+        for (final String actualItem : actualItems) {
+            Assert.assertEquals("expected match", expected, actualItem);
+        }
     }
 }

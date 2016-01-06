@@ -1,22 +1,25 @@
 package com.briarshore.codemash.collections;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * This is an example of how *NOT* to build a sorted array list
  */
 public class SortedArrayListBuilder {
-    private List<String> items;
+    // Note: List and not ArrayList: principle -> Code to interfaces.
+    // Note: 'final' does not make the list immutable/unmodifiable... I just can't reassign the field items.
+    private final List<String> items;
+
+    public SortedArrayListBuilder() {
+        this.items = new ArrayList<String>();
+    }
 
     public boolean add(final String s) {
-        return false;
+        return items.add(s);
     }
 
     public List<String> getItems() {
         return items;
-    }
-
-    public void setItems(final List<String> items) {
-        this.items = items;
     }
 }
