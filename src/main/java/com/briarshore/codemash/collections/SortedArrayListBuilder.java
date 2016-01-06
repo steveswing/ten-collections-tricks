@@ -36,6 +36,14 @@ public class SortedArrayListBuilder {
     }
 
     public boolean addUnique(final String s) {
-        return false;
+        final boolean result;
+        int index = Collections.binarySearch(items, s);
+        if (index < 0) {
+            items.add(-1 - index, s);
+            result = true;
+        } else {
+            result = false;
+        }
+        return result;
     }
 }
