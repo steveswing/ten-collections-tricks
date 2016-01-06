@@ -32,6 +32,6 @@ public class SortedArrayListBuilder {
     }
 
     public List<String> getItems() {
-        return items;
+        return Collections.unmodifiableList(items);
     }
 }

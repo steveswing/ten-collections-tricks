@@ -54,19 +54,23 @@ public class SortedArrayListBuilderTest {
 
         Assert.assertEquals("expected match", expected1 + ", " + expected2, new StringJoiner(", ").add(actualItems.get(0)).add(actualItems.get(1)).toString());
 
-        final String aardvark = "aardvark";
-        actualItems.add(aardvark);
-
         Assert.assertNotNull("expected non-null", actualItems);
-        Assert.assertEquals("expected match", 3, actualItems.size());
+        Assert.assertEquals("expected match", 2, actualItems.size());
 
         final String actual0 = actualItems.get(0);
-        Assert.assertEquals("expected match", aardvark, actual0);
+        Assert.assertEquals("expected match", expected1, actual0);
 
         final String actual1 = actualItems.get(1);
         Assert.assertEquals("expected match", expected2, actual1);
 
         final List<String> expectedItemsOrdered = Arrays.asList(expected1, expected2);
         Assert.assertEquals("expected match", expectedItemsOrdered, actualItems);
+    }
+
+    @Test(expected = UnsupportedOperationException.class)
+    public void testItemsIsUnmodifiable() throws Exception {
+        builder.getItems().add("Failure");
+        Assert.fail("expected exception: ");
+
     }
 }
