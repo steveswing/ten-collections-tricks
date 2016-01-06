@@ -48,6 +48,11 @@ public class SortedArrayListBuilder {
     }
 
     public boolean addUniqueCaseInsensitivity(final String s) {
-        return addUnique(s);
+        final int index = Collections.binarySearch(items, s, String.CASE_INSENSITIVE_ORDER);
+        if (index < 0) {
+            items.add(-1 - index, s);
+            return true;
+        }
+        return false;
     }
 }
