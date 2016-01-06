@@ -34,4 +34,8 @@ public class SortedArrayListBuilder {
     public List<String> getItems() {
         return Collections.unmodifiableList(items);
     }
+
+    public boolean addUnique(final String s) {
+        return false;
+    }
 }

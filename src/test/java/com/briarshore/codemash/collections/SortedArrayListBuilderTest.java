@@ -71,6 +71,12 @@ public class SortedArrayListBuilderTest {
     public void testItemsIsUnmodifiable() throws Exception {
         builder.getItems().add("Failure");
         Assert.fail("expected exception: ");
+    }
 
+    @Test
+    public void testAddUniqueItems() throws Exception {
+        final String expected = "expected";
+        Assert.assertTrue("expected true", builder.addUnique(expected));
+        Assert.assertFalse("expected false", builder.addUnique(expected));
     }
 }
