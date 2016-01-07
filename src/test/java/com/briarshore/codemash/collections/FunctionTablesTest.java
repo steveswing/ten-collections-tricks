@@ -11,17 +11,17 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class FunctionTranslatorsTest {
+public class FunctionTablesTest {
 
-    private FunctionTranslators subject;
+    private FunctionTables subject;
 
     @Before
     public void setUp() throws Exception {
-        subject = new FunctionTranslators();
+        subject = new FunctionTables();
     }
 
     @Test
-    public void testValueTranslation() throws Exception {
+    public void testFunctionTableValueTranslation() throws Exception {
         // Jersey can provide queryParameters this way
         // final MultivaluedMap<String, String> queryParameters = uriInfo.getQueryParameters(true);
 

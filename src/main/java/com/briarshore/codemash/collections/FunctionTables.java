@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 import com.google.common.base.Strings;
 import com.google.common.collect.Maps;
 
-public class FunctionTranslators {
+public class FunctionTables {
     private static final Comparator<String> nullSafeCaseInsensitiveComparator = new Comparator<String>() {
         @Override
         public int compare(final String s1, final String s2) {
