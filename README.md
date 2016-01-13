@@ -2,9 +2,17 @@
 
 ![Steve 2015](https://www.gravatar.com/avatar/e02954c6aac2f60521127ffad2a9c8a0?s=100 "Steve 2015")
 
-Steve Swing
+Thursday, January 7, 2016 
 
-Thursday, January 7, 2016 8:00am Indigo Bay
+Room: Indigo Bay
+
+Time: 08:00 - 09:00
+
+Speaker: Steve Swing
+
+Topics: Programming Principles, Testing, Functional Programming, Other, Java
+
+Session Type: Regular Session
 
 Many developers stick with the tried and true ArrayList and HashMap. If they want to get wild and crazy they might throw in a HashSet. But there's so much more depth to the Java Collections API, Guava, and Commons-Collections that can take you to the next level! Prepare for the functional style capabilities available in Java 8 with Lambda expressions and streams! You'll learn how and when to use TreeMap, TreeSet, LinkedHashMap, LinkedHashSet, TreeMultimap, TreeMultiset, BiMaps, Tables, MapMaker, Sets, Maps, Filters, Predicates, Functions, transformers, Comparators, BiMaps, Entry, EntryTransformers, Iterators, immutable, and unmodifiable collections. You might even learn something new for ArrayList like how to build an already sorted as you add elements. Attend this talk if you want to wield the power of the collections APIs like a master craftsman!
 
